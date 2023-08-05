@@ -30,6 +30,9 @@ def LegalStatusExtract(PatNum, AppNumberText):
         x=data['infoMessageText'][0]
         return x
 
+@app.route('/')
+def home():
+    return "hello world"
 @app.route('/feeInfo', methods=['GET'])
 def feeInfo():
     patentNumber = request.args.get('patentNumber')
